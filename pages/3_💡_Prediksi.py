@@ -9,7 +9,7 @@ def predict_sentiment(text):
     prediction = naive_bayes.predict(text_vectorized)
     return prediction[0]
 
-st.title('Aplikasi Analisis Sentimen Sederhana')
+st.title('Prediksi')
 # Baca file CSV dari direktori lokal
 file_path = 'https://muyacho.com/documents/dataset.csv'  # Ganti dengan path ke file CSV Anda
 data_df = pd.read_csv(file_path)
@@ -33,7 +33,7 @@ naive_bayes = MultinomialNB()
 naive_bayes.fit(X_vectorized, labels)
 
 # Masukkan ulasan produk
-st.write('Masukkan ulasan produk:')
+st.write('Komentar Aplikasi Tokopedia : ')
 user_input = st.text_area('Ulasan produk')
 
 if st.button('Prediksi'):
@@ -45,6 +45,6 @@ if st.button('Prediksi'):
 
 # Tampilkan jumlah keseluruhan data dan jumlah label positif, netral, dan negatif
 st.write('Jumlah Keseluruhan Data:', total_data)
-st.write('Jumlah Label Positif:', positive_count)
-st.write('Jumlah Label Netral:', neutral_count)
-st.write('Jumlah Label Negatif:', negative_count)
+st.write('Positif:', positive_count)
+st.write('Netral:', neutral_count)
+st.write('Negatif:', negative_count)

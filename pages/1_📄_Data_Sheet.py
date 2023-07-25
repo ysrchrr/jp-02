@@ -7,7 +7,7 @@ st.set_page_config(
     page_icon="📄",
 )
 
-st.title('📄Data Sheet Pages')
+st.title('📄Dataset Komentar Aplikasi Tokopedia')
 
 DATA_URL = ('https://muyacho.com/documents/data.csv')
 
@@ -25,5 +25,5 @@ data = load_data(10000)
 # Notify the reader that the data was successfully loaded.
 data_load_state.text("Berhasil mendapatkan data")
 
-st.subheader('Data Ulasan')
+st.subheader('Data Komentar')
 st.write(data)

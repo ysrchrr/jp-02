@@ -48,7 +48,7 @@ def predict_and_evaluate(model, vectorizer, data_df, training_data_count):
 
 # Mulai aplikasi Streamlit
 def main():
-    st.title('Aplikasi Analisis Sentimen dengan Naive Bayes')
+    st.title('Akurasi Model')
 
     # Baca file CSV dari direktori lokal
     file_path = 'https://muyacho.com/documents/data.csv'  # Ganti dengan path ke file CSV Anda
@@ -63,7 +63,7 @@ def main():
     # Hitung dan tampilkan akurasi model beserta response dan labelnya
     accuracy, testing_responses, testing_labels = predict_and_evaluate(model, vectorizer, data_df, training_data_count)
     accuracy_percentage = accuracy * 100
-    st.write(f'Akurasi Model dengan Persentase {training_percentage}% Data Pelatihan: {accuracy_percentage:.2f}%')
+    st.write(f'Akurasi Model dengan Data Latih {training_percentage}% Dan Uji Data: {accuracy_percentage:.2f}%')
 
     # Tampilkan response dan labelnya
     st.write('Response dan Label pada Data Uji:')
