@@ -1,0 +1,21 @@
+at,userName,response,score,label
+2023-07-25 10:30:45,Alice,"Produk ini sangat bagus! Saya sangat puas dengan kualitasnya.",5,Positif
+2023-07-25 11:15:22,Bob,"Harganya terlalu mahal untuk kualitas yang diberikan.",2,Negatif
+2023-07-25 12:00:10,Charlie,"Ulasan produk ini biasa saja, tidak ada yang istimewa.",3,Netral
+2023-07-25 12:45:55,David,"Pengiriman sangat cepat dan produknya berkualitas.",4,Positif
+2023-07-25 13:30:30,Eva,"Saya kecewa dengan produk ini, sebaiknya hindari.",1,Negatif
+2023-07-25 14:20:15,Frank,"Produk ini harganya sesuai dengan kualitasnya. Puas!",4,Positif
+2023-07-25 15:10:50,Grace,"Ulasan produknya positif, tetapi kurang inovatif.",3,Netral
+2023-07-25 16:05:35,Henry,"Saya sangat merekomendasikan produk ini kepada teman-teman.",5,Positif
+2023-07-25 17:00:20,Isabel,"Harganya murah, tetapi kualitasnya juga tidak bagus.",2,Negatif
+2023-07-25 17:50:05,Jack,"Saya suka dengan produk ini. Kualitasnya terjamin.",4,Positif
+2023-07-25 18:40:40,Kate,"Ulasan produknya biasa saja, tidak terlalu baik.",3,Netral
+2023-07-25 19:35:25,Liam,"Produk ini sangat mengecewakan. Tidak sesuai harapan.",1,Negatif
+2023-07-25 20:30:10,Mia,"Harganya cukup mahal, tetapi kualitasnya memuaskan.",4,Positif
+2023-07-25 21:25:55,Noah,"Ulasan produknya bagus, tetapi perlu peningkatan.",3,Netral
+2023-07-25 22:20:30,Olive,"Produk ini sangat buruk! Saya sangat kecewa.",1,Negatif
+2023-07-25 23:15:15,Patrick,"Harganya terlalu tinggi untuk kualitas yang didapatkan.",2,Negatif
+2023-07-25 00:10:50,Quinn,"Ulasan produknya sangat positif, saya senang membelinya.",5,Positif
+2023-07-25 01:05:35,Rachel,"Produk ini biasa saja, tidak terlalu istimewa.",3,Netral
+2023-07-25 02:00:20,Stephen,"Saya sangat kecewa dengan produk ini.",1,Negatif
+2023-07-25 02:55:05,Tom,"Harganya cukup terjangkau, dan kualitasnya baik.",4,Positif
