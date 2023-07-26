@@ -51,24 +51,29 @@ def main():
     st.title('Akurasi Model')
 
     # Baca file CSV dari direktori lokal
-    file_path = 'https://muyacho.com/documents/data.csv'  # Ganti dengan path ke file CSV Anda
+    file_path = 'https://muyacho.com/documents/dataset_postprocessing.csv'  # Ganti dengan path ke file CSV Anda
     data_df = pd.read_csv(file_path)
 
     # Pilih persentase data yang digunakan untuk pelatihan
-    training_percentage = st.selectbox('Pilih Persentase Data untuk Pelatihan:', [90])
+    training_percentage_options = ['Please select', 90]
+    training_percentage = st.selectbox('Pilih Persentase Data untuk Pelatihan:', training_percentage_options)
 
-    # Latih model Naive Bayes
-    model, vectorizer, training_data_count = train_naive_bayes(data_df, training_percentage)
+    if training_percentage == 'Please select':
+        # Show a message or warning to prompt the user to select an option
+        st.warning('Silakan pilih persentase data untuk pelatihan.')
+    else:
+        # Latih model Naive Bayes
+        model, vectorizer, training_data_count = train_naive_bayes(data_df, training_percentage)
 
-    # Hitung dan tampilkan akurasi model beserta response dan labelnya
-    accuracy, testing_responses, testing_labels = predict_and_evaluate(model, vectorizer, data_df, training_data_count)
-    accuracy_percentage = accuracy * 100
-    st.write(f'Akurasi Model dengan Data Latih {training_percentage}% Dan Uji Data: {accuracy_percentage:.2f}%')
+        # Hitung dan tampilkan akurasi model beserta response dan labelnya
+        accuracy, testing_responses, testing_labels = predict_and_evaluate(model, vectorizer, data_df, training_data_count)
+        accuracy_percentage = accuracy * 100
+        st.write(f'Akurasi Model dengan Data Latih {training_percentage}% Dan Uji Data: {accuracy_percentage:.2f}%')
 
-    # Tampilkan response dan labelnya
-    st.write('Response dan Label pada Data Uji:')
-    results_df = pd.DataFrame({'Response': testing_responses, 'Label': testing_labels})
-    st.write(results_df)
+        # Tampilkan response dan labelnya
+        st.write('Response dan Label pada Data Uji:')
+        results_df = pd.DataFrame({'Response': testing_responses, 'Label': testing_labels})
+        st.write(results_df)
 
 if __name__ == '__main__':
     main()

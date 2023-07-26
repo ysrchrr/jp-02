@@ -11,7 +11,7 @@ def predict_sentiment(text):
 
 st.title('Prediksi')
 # Baca file CSV dari direktori lokal
-file_path = 'https://muyacho.com/documents/dataset.csv'  # Ganti dengan path ke file CSV Anda
+file_path = 'https://muyacho.com/documents/dataset_postprocessing.csv'  # Ganti dengan path ke file CSV Anda
 data_df = pd.read_csv(file_path)
 
 # Pisahkan data menjadi data ulasan dan label
