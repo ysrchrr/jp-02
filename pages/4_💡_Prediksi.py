@@ -34,14 +34,14 @@ naive_bayes.fit(X_vectorized, labels)
 
 # Masukkan ulasan produk
 st.write('Komentar Aplikasi Tokopedia : ')
-user_input = st.text_area('Ulasan produk')
+user_input = st.text_area('Komentar')
 
 if st.button('Prediksi'):
     if user_input:
         prediction = predict_sentiment(user_input)
         st.write(f'Hasil Prediksi: {prediction}')
     else:
-        st.write('Masukkan ulasan produk terlebih dahulu')
+        st.write('Masukkan komentar terlebih dahulu')
 
 # Tampilkan jumlah keseluruhan data dan jumlah label positif, netral, dan negatif
 st.write('Jumlah Keseluruhan Data:', total_data)
