@@ -68,7 +68,7 @@ def main():
         # Hitung dan tampilkan akurasi model beserta response dan labelnya
         accuracy, testing_responses, testing_labels = predict_and_evaluate(model, vectorizer, data_df, training_data_count)
         accuracy_percentage = accuracy * 100
-        st.write(f'Akurasi Model dengan Data Latih {training_percentage}% Dan Uji Data: {accuracy_percentage:.2f}%')
+        st.write(f'Akurasi Model dengan Data Latih {training_percentage}% Dan Data Uji: {accuracy_percentage:.2f}%')
 
         # Tampilkan response dan labelnya
         st.write('Response dan Label pada Data Uji:')
