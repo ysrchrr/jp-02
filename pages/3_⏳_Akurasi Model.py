@@ -71,7 +71,7 @@ def main():
         st.write(f'Akurasi Model dengan Data Latih {training_percentage}% Dan Data Uji: {accuracy_percentage:.2f}%')
 
         # Tampilkan response dan labelnya
-        st.write('Response dan Label pada Data Uji:')
+        st.write('Response dan Label pada Accucary Persentase:')
         results_df = pd.DataFrame({'Response': testing_responses, 'Label': testing_labels})
         st.write(results_df)
 

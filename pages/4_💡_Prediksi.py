@@ -11,18 +11,15 @@ def predict_sentiment(text):
 
 st.title('Prediksi')
 # Baca file CSV dari direktori lokal
-file_path = 'https://muyacho.com/documents/dataset_postprocessing.csv'  # Ganti dengan path ke file CSV Anda
+# file_path = 'https://muyacho.com/documents/dataset_postprocessing.csv'  # Ganti dengan path ke file CSV Anda
+file_path = 'E:\PJ\skripsi-bagas\coba.csv'  # Ganti dengan path ke file CSV Anda
 data_df = pd.read_csv(file_path)
 
 # Pisahkan data menjadi data ulasan dan label
 responses = data_df['response'].tolist()
 labels = data_df['label'].tolist()
 
-# Hitung jumlah keseluruhan data dan jumlah label positif, netral, dan negatif
-total_data = len(data_df)
-positive_count = labels.count('Positif')
-neutral_count = labels.count('Netral')
-negative_count = labels.count('Negatif')
+
 
 # Proses data teks menjadi vektor fitur menggunakan Count Vectorizer
 vectorizer = CountVectorizer()
@@ -43,8 +40,3 @@ if st.button('Prediksi'):
     else:
         st.write('Masukkan komentar terlebih dahulu')
 
-# Tampilkan jumlah keseluruhan data dan jumlah label positif, netral, dan negatif
-st.write('Jumlah Keseluruhan Data:', total_data)
-st.write('Positif:', positive_count)
-st.write('Netral:', neutral_count)
-st.write('Negatif:', negative_count)

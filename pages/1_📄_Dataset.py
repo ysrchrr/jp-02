@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 st.title('📄Dataset Komentar Aplikasi Tokopedia')
-
+st.write('Data Komentar Tokopedia ini diambil dari Google Play Store')
 DATA_URL = ('https://muyacho.com/documents/dataset_postprocessing.csv')
 
 def load_data(nrows):
@@ -29,3 +29,19 @@ data.index = np.arange(1, len(data) + 1)
 
 st.subheader('Data Komentar')
 st.write(data)
+data_df = pd.read_csv(DATA_URL)
+
+# Pisahkan data menjadi data ulasan dan label
+labels = data_df['label'].tolist()
+
+# Hitung jumlah keseluruhan data dan jumlah label positif, netral, dan negatif
+total_data = len(data_df)
+positive_count = labels.count('Positif')
+neutral_count = labels.count('Netral')
+negative_count = labels.count('Negatif')
+
+# Tampilkan jumlah keseluruhan data dan jumlah label positif, netral, dan negatif
+st.write('Jumlah Keseluruhan Data:', total_data)
+st.write('Positif:', positive_count)
+st.write('Netral:', neutral_count)
+st.write('Negatif:', negative_count)
