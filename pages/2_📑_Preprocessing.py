@@ -28,5 +28,5 @@ data_load_state.text("Berhasil mendapatkan data")
 # Set a custom index to start from 1
 data.index = np.arange(1, len(data) + 1)
 
-st.subheader('Data Komentar')
+st.subheader('Hasil Preprocessing dari data sebelumnya')
 st.write(data)
