@@ -7,7 +7,7 @@ st.set_page_config(
     page_icon="📑",
 )
 
-st.title('📑Preprocessing Komentar Aplikasi Tokopedia')
+st.title('📑Preprocessing')
 
 DATA_URL = ('https://muyacho.com/documents/dataset_preprocessing.csv')
 
