@@ -6,7 +6,7 @@ st.set_page_config(
 )
 
 st.title('Selamat datang👋')
-st.subheader('Website Analis Sentimen Komentar Tokopedia dengan Metode Naive Bayes 📊')
+st.subheader('Website Analisis Sentimen Komentar Tokopedia dengan Metode Naive Bayes 📊')
 
 st.markdown(
     """
