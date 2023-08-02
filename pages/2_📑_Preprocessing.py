@@ -9,7 +9,7 @@ st.set_page_config(
 
 st.title('📑Preprocessing')
 
-DATA_URL = ('https://muyacho.com/documents/dataset_preprocessing.csv')
+DATA_URL = ('https://muyacho.com/documents/dataset_preprocessing_new.csv')
 
 
 def load_data(nrows):
