@@ -1,9 +1,13 @@
-# file_app.py
 import streamlit as st
 import pandas as pd
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import accuracy_score
+
+st.set_page_config(
+    page_title="Akurasi Model",
+    page_icon="⏳",
+)
 
 # Fungsi untuk melatih model Naive Bayes
 def train_naive_bayes(data_df, training_percentage):
@@ -55,26 +59,28 @@ def main():
     data_df = pd.read_csv(file_path)
 
     # Pilih persentase data yang digunakan untuk pelatihan
-    training_percentage_options = ['Please select', 90]
+    training_percentage_options = ['Please select', 80]
     training_percentage = st.selectbox('Pilih Persentase Data untuk Pelatihan:', training_percentage_options)
 
     if training_percentage == 'Please select':
         # Show a message or warning to prompt the user to select an option
-        st.warning('Silakan pilih persentase data untuk pelatihan.')
+        st.warning('Silakan pilih persentase data untuk pelatihan')
     else:
         # Latih model Naive Bayes
         model, vectorizer, training_data_count = train_naive_bayes(data_df, training_percentage)
 
-        # Hitung dan tampilkan akurasi model beserta response dan labelnya
+        # Hitung dan tampilkan akurasi model 
         accuracy, testing_responses, testing_labels = predict_and_evaluate(model, vectorizer, data_df, training_data_count)
-        accuracy_percentage = accuracy * 100
-        st.write(f'Akurasi Model dengan Data Latih {training_percentage}% ')
-        st.write(f'Dan Accucary Persentase: {accuracy_percentage:.2f}%')
+        accuracy = accuracy * 100
+        st.write(f'Persentase Data Latih : {training_percentage}% dan Data Uji : 20%')
+        
 
         # Tampilkan response dan labelnya
-        st.write('Response dan Label pada Data Uji:')
+        st.write('Hasil Tabel Data Uji:')
         results_df = pd.DataFrame({'Response': testing_responses, 'Label': testing_labels})
         st.write(results_df)
+        
 
+# Menjalankan aplikasi
 if __name__ == '__main__':
     main()
