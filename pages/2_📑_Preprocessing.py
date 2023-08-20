@@ -7,7 +7,7 @@ st.set_page_config(
     page_icon="📑",
 )
 
-st.title('📑Preprocessing')
+st.title('Preprocessing')
 
 DATA_URL = ('https://muyacho.com/documents/dataset_preprocessing_new.csv')
 

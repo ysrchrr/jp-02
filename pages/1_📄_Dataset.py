@@ -7,7 +7,7 @@ st.set_page_config(
     page_icon="📄",
 )
 
-st.title('📄Dataset')
+st.title('Dataset')
 st.write('Data Komentar Tokopedia ini diambil dari Google Play Store')
 DATA_URL = ('https://muyacho.com/documents/dataset_postprocessing.csv')
 
