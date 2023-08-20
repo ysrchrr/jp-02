@@ -1,6 +1,7 @@
 import streamlit as st
 import re
 import nltk
+nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
